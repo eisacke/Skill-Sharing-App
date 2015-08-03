@@ -26,7 +26,7 @@
         <td><%= lesson.image_three %></td>
         <td><%= lesson.location %></td>
         <td><%= lesson.cost %></td>
-        <td><%= lesson.teacher_id %></td>
+        <td><%= lesson.teacher.try(:first_name) %></td>
         <td><%= lesson.category_id %></td>
         <td><%= link_to 'Show', lesson %></td>
         <td><%= link_to 'Edit', edit_lesson_path(lesson) %></td>

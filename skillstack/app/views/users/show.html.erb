@@ -11,6 +11,12 @@
 </p>
 
 <p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+
+<p>
   <strong>Bio:</strong>
   <%= @user.bio %>
 </p>
@@ -24,6 +30,25 @@
   <strong>Password digest:</strong>
   <%= @user.password_digest %>
 </p>
+
+<p>Classes:</p>
+<% @user.lessons.each do |lesson| %>
+<div class="lesson">
+<%= link_to lesson do %>
+  <%= lesson.title %>
+<% end %>
+</div>
+<% end %>
+
+<p>Bookings:</p>
+<% @user.bookings.each do |booking| %>
+<div class="booking">
+<%= link_to booking do %>
+  <%= booking.lesson.try(:title) %>
+  <%= booking.date %>
+<% end %>
+</div>
+<% end %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
