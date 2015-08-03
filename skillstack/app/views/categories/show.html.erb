@@ -10,11 +10,5 @@
   <%= @category.description %>
 </p>
 
-<% @category.lessons.each do |lesson| %>
-<div class="lesson">
-<%= lesson.title %>
-</div>
-<% end %>
-
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
