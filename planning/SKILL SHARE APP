@@ -1,0 +1,90 @@
+SKILL SHARE APP
+
+NO APIs!
+
+THEMED? design, cooking, diy, art/crafts
+
+IDEAS?
+Handlettering
+How to use Photoshop
+Photo editing with Photoshop
+Bookbinding
+Photography with a film camera
+
+Baking - certain things
+Cooking - certain things
+
+Local tour guides
+Local meals 
+
+skill
+share
+skillstack
+stock
+stockpile
+reserve
+pool
+
+DESIGN | COOKING | DIY | MUSIC | TECHNOLOGY | OTHER
+
+HOW IT WORKS
+
+A user can sign up and make a profile, and be able to post lessons.
+The user has to post their own information, including name, image and bio. 
+A user can browse the list of lessons that are available. 
+
+More like a community, less student/teacher?
+
+Pay money, or swap something? 
+
+
+***USER***
+STUDENT INFO:
+- first_name
+- last_name
+- image
+- bio
+
+TEACHER INFO:
+- first_name
+- last_name
+- image
+- bio
+
+student and teacher profiles are basically the same? is that the point?
+
+has_many :classes
+has_many :booked_classes
+
+
+***LESSON***
+LESSON INFO:
+- title
+- description
+- image_one
+- image_two
+- image_three
+- location
+- cost
+- teacher_id
+- related_classes? (self-join?)
+
+FEATURES
+- taggable
+- searchable
+- commentable
+- likeable? 
+- followers?
+
+class User < ActiveRecord::Base
+  has_many :lessons, dependent: :destroy
+end
+
+@user.destroy # will destory their lessons as well
+
+
+
+
+
+
+

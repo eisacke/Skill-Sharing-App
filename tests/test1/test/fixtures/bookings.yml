@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lesson_id_id: 
+  date: MyString
+  time: MyString
+  confirmed: false
+  teacher_id_id: 
+  student_id_id: 
+
+two:
+  lesson_id_id: 
+  date: MyString
+  time: MyString
+  confirmed: false
+  teacher_id_id: 
+  student_id_id: 
