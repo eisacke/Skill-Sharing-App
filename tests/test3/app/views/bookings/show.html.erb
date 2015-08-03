@@ -7,12 +7,12 @@
 
 <p>
   <strong>Lesson:</strong>
-  <%= @booking.lesson_id %>
+  <%= @booking.lesson.try(:title) %>
 </p>
 
 <p>
   <strong>Student:</strong>
-  <%= @booking.student_id %>
+  <%= @booking.student.try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_booking_path(@booking) %> |
