@@ -26,11 +26,6 @@
   <%= image_tag @user.image, :class => "user_show_image" %>
 </p>
 
-<p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
 <p>Classes:</p>
 <% @user.lessons.each do |lesson| %>
 <div class="lesson">
@@ -44,9 +39,9 @@
 <% @user.bookings.each do |booking| %>
 <div class="booking">
 <%= link_to booking do %>
-  <%= booking.lesson.try(:title) %>
-  <%= booking.date %>
+  <p><%= booking.lesson.try(:title) %></p>
 <% end %>
+<p><%= booking.date %></p>
 </div>
 <% end %>
 

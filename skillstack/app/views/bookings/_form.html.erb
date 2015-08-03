@@ -13,11 +13,7 @@
 
   <div class="field">
     <%= f.label :lesson_id %><br>
-    <%= f.number_field :lesson_id %>
-  </div>
-  <div class="field">
-    <%= f.label :student_id %><br>
-    <%= f.number_field :student_id %>
+    <%= f.collection_select(:lesson_id, Lesson.all, :id, :title) %>
   </div>
   <div class="field">
     <%= f.label :time %><br>

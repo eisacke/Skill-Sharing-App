@@ -40,7 +40,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @lesson.category_id %>
+  <%= @lesson.category.try(:name) %>
 </p>
 
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |

@@ -3,8 +3,7 @@
     <li><%= user.first_name %></li>
     <li><%= user.last_name %></li>
     <li><%= user.bio %></li>
-    <li><%= user.image %></li>
-    <li><%= user.password_digest %></li>
+    <li><%= image_tag user.image, :class => "user_show_image" %></li>
     <li><%= link_to 'Show', user %></li>
     <li><%= link_to 'Edit', edit_user_path(user) %></li>
     <li><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></li>

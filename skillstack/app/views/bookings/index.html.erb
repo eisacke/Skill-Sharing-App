@@ -3,7 +3,7 @@
 <% @bookings.each do |booking| %>
   <ul>
     <li>Lesson Title: <%= booking.lesson.try(:title) %></li>
-    <li>Lesson Teacher: <%= booking.lesson.teacher.try(:name) %></li>
+    <li>Lesson Teacher: <%= booking.lesson.teacher.try(:first_name) %> <%= booking.lesson.teacher.try(:last_name) %></li>
     <li>Student: <%= booking.student.try(:first_name) %> <%= booking.student.try(:last_name) %></li>
     <li>Date: <%= booking.date %></li>
     <li>Time: <%= booking.time %></li>
