@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @lesson.title %>
@@ -37,7 +35,7 @@
 
 <p>
   <strong>Teacher:</strong>
-  <%= @lesson.teacher_id %>
+  <%= @lesson.teacher.try(:first_name) %>
 </p>
 
 <p>

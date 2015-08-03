@@ -3,15 +3,14 @@
     <ul>
       <li><%= link_to "skillstack", lessons_path %></li>
       <% if current_user %>
-      <li><%= link_to "Logout", logout_path, method: :delete, data: {
-        confirm: "Are you sure?" } %></li>
-        <li>Hello, <%= current_user.first_name %></li>
-        <% else %>
-        <li><%= link_to "Login", login_path %></li>
-        <% end %>
-        <li><%= link_to "Users", users_path %></li>
-        <li><%= link_to "Lessons", lessons_path %></li>
-        <li><%= link_to "Bookings", bookings_path %></li>
-      </ul>
-    </nav>
-  </header>
+      <li><%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
+      <li>Hello, <%= current_user.first_name %></li>
+      <% else %>
+      <li><%= link_to "Login", login_path %></li>
+      <% end %>
+      <li><%= link_to "Users", users_path %></li>
+      <li><%= link_to "Lessons", lessons_path %></li>
+      <li><%= link_to "Bookings", bookings_path %></li>
+    </ul>
+  </nav>
+</header>

@@ -24,17 +24,13 @@ class LessonsController < ApplicationController
   # POST /lessons
   # POST /lessons.json
   def create
-    @lesson = Lesson.new(lesson_params)
-
-    respond_to do |format|
-      if @lesson.save
-        format.html { redirect_to @lesson, notice: 'Lesson was successfully created.' }
-        format.json { render :show, status: :created, location: @lesson }
-      else
-        format.html { render :new }
-        format.json { render json: @lesson.errors, status: :unprocessable_entity }
-      end
-    end
+   params[:lesson][:teacher_id] = current_user.id
+   @lesson = Lesson.new(lesson_params)
+   if @lesson.save
+     redirect_to @lesson
+   else
+     render :new
+   end
   end
 
   # PATCH/PUT /lessons/1
@@ -71,4 +67,4 @@ class LessonsController < ApplicationController
     def lesson_params
       params.require(:lesson).permit(:title, :description, :image_one, :image_two, :image_three, :location, :cost, :teacher_id, :category_id)
     end
-end
+  end
