@@ -1,11 +1,16 @@
 <p>
-  <strong>Lesson:</strong>
-  <%= @booking.lesson_id %>
+  <strong>Lesson Title:</strong>
+  <%= @booking.lesson.try(:title) %>
+</p>
+
+<p>
+  <strong>Teacher:</strong>
+  <%= @booking.lesson.teacher.try(:first_name) %> <%= @booking.lesson.teacher.try(:last_name) %>
 </p>
 
 <p>
   <strong>Student:</strong>
-  <%= @booking.student_id %>
+  <%= @booking.student.try(:first_name) %> <%= @booking.student.try(:last_name) %>
 </p>
 
 <p>
