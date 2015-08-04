@@ -1,0 +1,16 @@
+<li>
+  <ul>
+    <li>Title: <%= lesson.title %></li>
+    <li>Description: <%= lesson.description %></li>
+    <li>Image One: <%= lesson.image_one %></li>
+    <li>Image Two: <%= lesson.image_two %></li>
+    <li>Image Three: <%= lesson.image_three %></li>
+    <li>Location: <%= lesson.location %></li>
+    <li>Cost: <%= lesson.cost %></li>
+    <li>Teacher: <%= lesson.teacher.try(:first_name) %></li>
+    <li>Category: <%= lesson.category.try(:name) %></li>
+    <li><%= link_to 'Show', lesson %></li>
+    <li><%= link_to 'Edit', edit_lesson_path(lesson) %></li>
+    <li><%= link_to 'Destroy', lesson, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+</li>

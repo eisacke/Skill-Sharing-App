@@ -2,6 +2,12 @@
   width: 200px;
 }
 
+h1 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 body {
   font-family: helvetica;
   background-color: #FAFAFA;
