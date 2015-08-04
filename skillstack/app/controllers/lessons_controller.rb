@@ -5,7 +5,7 @@ class LessonsController < ApplicationController
   # GET /lessons.json
   def index
     if params[:search].present?
-      @lessons = Lesson.near(params[:search], 50)
+      @lessons = Lesson.near(params[:search], 100)
     else
       @lessons = Lesson.all
     end

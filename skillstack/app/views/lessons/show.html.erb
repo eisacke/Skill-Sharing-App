@@ -27,10 +27,6 @@
   <strong>Location:</strong>
   <%= @lesson.location %>
 </p>
-<p>
-<%= @lesson.latitude %>
-<%= @lesson.longitude %>
-</p>
 
 <p>
   <strong>Cost:</strong>
@@ -49,5 +45,4 @@
 
 <p><%= link_to "MAKE BOOKING", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %> |
-<%= link_to 'Back', lessons_path %>
+<%= link_to 'Edit', edit_lesson_path(@lesson) %>
