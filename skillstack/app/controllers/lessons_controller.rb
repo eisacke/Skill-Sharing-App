@@ -4,7 +4,11 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    @lessons = Lesson.all
+    if params[:search].present?
+      @lessons = Lesson.near(params[:search], 50)
+    else
+      @lessons = Lesson.all
+    end
   end
 
   def teacher_lessons
@@ -36,7 +40,7 @@ class LessonsController < ApplicationController
    else
      render :new
    end
-  end
+ end
 
   # PATCH/PUT /lessons/1
   # PATCH/PUT /lessons/1.json
@@ -70,6 +74,6 @@ class LessonsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lesson_params
-      params.require(:lesson).permit(:title, :description, :image_one, :image_two, :image_three, :location, :cost, :teacher_id, :category_id)
+      params.require(:lesson).permit(:title, :description, :image_one, :image_two, :image_three, :location, :cost, :teacher_id, :category_id, :city, :longitute, :latitude)
     end
   end
