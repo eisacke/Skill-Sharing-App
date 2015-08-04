@@ -23,7 +23,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @user.image, :class => "user_show_image" %>
+  <%= image_tag @user.avatar, :class => "user_show_image" %>
 </p>
 
 <p>Classes:</p>
@@ -34,8 +34,6 @@
 <% end %>
 </div>
 <% end %>
-
-<p><%= link_to "My Bookings", bookings_path %></p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<% if current_user == @user %>
+<%= link_to 'Edit', edit_user_path(@user) %>
+<% end %>
