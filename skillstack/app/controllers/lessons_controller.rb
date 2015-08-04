@@ -7,6 +7,11 @@ class LessonsController < ApplicationController
     @lessons = Lesson.all
   end
 
+  def teacher_lessons
+    @lessons = current_user.lessons
+    render :teacher_lessons
+  end
+
   # GET /lessons/1
   # GET /lessons/1.json
   def show
