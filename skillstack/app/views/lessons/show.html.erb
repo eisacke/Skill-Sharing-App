@@ -35,13 +35,15 @@
 
 <p>
   <strong>Teacher:</strong>
-  <%= link_to @lesson.teacher.try(:first_name), @lesson.teacher %>
+  <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %>
 </p>
 
 <p>
   <strong>Category:</strong>
   <%= link_to @lesson.category.try(:name), @lesson.category %>
 </p>
+
+<p><%= link_to "MAKE BOOKING", new_booking_path %></p>
 
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
 <%= link_to 'Back', lessons_path %>

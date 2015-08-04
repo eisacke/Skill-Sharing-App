@@ -5,7 +5,7 @@
 
 <p>
   <strong>Teacher:</strong>
-  <%= @booking.lesson.teacher.try(:first_name) %> <%= @booking.lesson.teacher.try(:last_name) %>
+  <%= link_to @booking.lesson.teacher.try(:first_name) + " " + @booking.lesson.teacher.try(:last_name), @booking.lesson.teacher %>
 </p>
 
 <p>

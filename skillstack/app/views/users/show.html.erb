@@ -35,15 +35,7 @@
 </div>
 <% end %>
 
-<p>Bookings:</p>
-<% @user.bookings.each do |booking| %>
-<div class="booking">
-<%= link_to booking do %>
-  <p><%= booking.lesson.try(:title) %></p>
-<% end %>
-<p><%= booking.date %></p>
-</div>
-<% end %>
+<p><%= link_to "My Bookings", bookings_path %></p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
