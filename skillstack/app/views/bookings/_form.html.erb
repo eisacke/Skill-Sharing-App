@@ -12,10 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :lesson_id %><br>
-    <%= f.collection_select(:lesson_id, Lesson.all, :id, :title) %>
-  </div>
-  <div class="field">
     <%= f.label :time %><br>
     <%= f.text_field :time %>
   </div>
@@ -23,6 +19,8 @@
     <%= f.label :date %><br>
     <%= f.text_field :date %>
   </div>
+  <%= f.hidden_field :lesson_id, value: params["lesson_id"] %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

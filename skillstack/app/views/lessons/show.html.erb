@@ -43,7 +43,7 @@
   <%= link_to @lesson.category.try(:name), @lesson.category %>
 </p>
 
-<p><%= link_to "MAKE BOOKING", new_booking_path %></p>
+<p><%= link_to "MAKE BOOKING", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
 
 <%= link_to 'Edit', edit_lesson_path(@lesson) %> |
 <%= link_to 'Back', lessons_path %>

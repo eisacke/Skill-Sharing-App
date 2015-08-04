@@ -1,8 +1,7 @@
 <li>
   <ul>
     <li>Lesson Title: <%= link_to booking.lesson.try(:title), booking.lesson %></li>
-    <li>Lesson Teacher: <%= link_to booking.lesson.teacher.try(:first_name) + " " + booking.lesson.teacher.try(:last_name), booking.lesson.teacher %></li>
-    <li>Student: <%= link_to booking.student.try(:first_name) + " " + booking.student.try(:last_name), booking.student %></li>
+    
     <li>Date: <%= booking.date %></li>
     <li>Time: <%= booking.time %></li>
     <li><%= link_to 'Show', booking %></li>
