@@ -5,16 +5,17 @@
   background-position: center;
   background-size: cover;
   opacity: 0.8;
+  position: relative;
 }
 
-.homepage_search {
+.homepage_search, .lesson_index_search {
   margin: 0 auto;
-  width: 346px;
-  background-color: aliceblue;
-  padding: 15px;
+  width: 351px;
+  background-color: white;
+  padding: 10px;
 
   .homepage_search_container {
-    width: 346px;
+    width: 351px;
   }
 
   input[type=text] {
@@ -27,10 +28,24 @@
   }
   input[type=submit] {
     height: 42px;
-    background-color: white;
+    background-color: dodgerblue;
+    color: white;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
-    border: 1px solid black;
+    border-radius: 5px;
+    border: 1px solid dodgerblue;
+    border-bottom: 3px solid #1C73C7;
     padding: 5px 10px 5px 10px;
+    position: relative;
+    top: -1px;
+    margin-left: 5px;
   }
+}
+
+.homepage_search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);  
+  transform: translate(-50%, -50%);  
 }
