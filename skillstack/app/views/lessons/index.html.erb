@@ -1,14 +1,16 @@
-<h1>Listing Lessons</h1>
+<main>
+  <h1>Listing Lessons</h1>
 
-<%= search_form_for @search do |f| %>
-<div class="field">
-  <%= f.text_field :description_cont, :placeholder => "What would you like to learn?" %>
-  <%= f.submit "Search" %>
-</div>
-<% end %>
+  <%= search_form_for @search do |f| %>
+  <div class="field">
+    <%= f.text_field :description_cont, :placeholder => "What would you like to learn?" %>
+    <%= f.submit "Search" %>
+  </div>
+  <% end %>
 
-<ul>
-  <%= render @lessons %>
-</ul>
+  <ul>
+    <%= render @lessons %>
+  </ul>
 
-<%= link_to 'New Lesson', new_lesson_path %>
+  <%= link_to 'New Lesson', new_lesson_path %>
+</main>

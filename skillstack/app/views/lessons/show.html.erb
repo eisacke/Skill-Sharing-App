@@ -1,48 +1,50 @@
-<p>
-  <strong>Title:</strong>
-  <%= @lesson.title %>
-</p>
+<main>
+  <p>
+    <strong>Title:</strong>
+    <%= @lesson.title %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @lesson.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @lesson.description %>
+  </p>
 
-<p>
-  <strong>Image one:</strong>
-  <%= image_tag @lesson.image_one %>
-</p>
+  <p>
+    <strong>Image one:</strong>
+    <%= image_tag @lesson.image_one %>
+  </p>
 
-<p>
-  <strong>Image two:</strong>
-  <%= @lesson.image_two %>
-</p>
+  <p>
+    <strong>Image two:</strong>
+    <%= @lesson.image_two %>
+  </p>
 
-<p>
-  <strong>Image three:</strong>
-  <%= @lesson.image_three %>
-</p>
+  <p>
+    <strong>Image three:</strong>
+    <%= @lesson.image_three %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @lesson.location %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @lesson.location %>
+  </p>
 
-<p>
-  <strong>Cost:</strong>
-  <%= @lesson.cost %>
-</p>
+  <p>
+    <strong>Cost:</strong>
+    <%= @lesson.cost %>
+  </p>
 
-<p>
-  <strong>Teacher:</strong>
-  <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %>
-</p>
+  <p>
+    <strong>Teacher:</strong>
+    <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= link_to @lesson.category.try(:name), @lesson.category %>
-</p>
+  <p>
+    <strong>Category:</strong>
+    <%= link_to @lesson.category.try(:name), @lesson.category %>
+  </p>
 
-<p><%= link_to "MAKE BOOKING", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
+  <p><%= link_to "MAKE BOOKING", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
 
-<%= link_to 'Edit', edit_lesson_path(@lesson) %>
+  <%= link_to 'Edit', edit_lesson_path(@lesson) %>
+</main>

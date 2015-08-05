@@ -1,9 +1,11 @@
-<h1>Bookings</h1>
+<main>
+  <h1>Bookings</h1>
 
-<% if current_user.bookings.count == 0 %>
-<p>You have 0 bookings! <%= link_to 'Click here', lessons_path %> to browse available lessons.</p>
-<% end %>
+  <% if current_user.bookings.count == 0 %>
+  <p>You have 0 bookings! <%= link_to 'Click here', lessons_path %> to browse available lessons.</p>
+  <% end %>
 
-<ul>
-  <%= render @bookings %>
-</ul>
+  <ul>
+    <%= render @bookings %>
+  </ul>
+</main>

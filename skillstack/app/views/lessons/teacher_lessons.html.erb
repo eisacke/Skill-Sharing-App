@@ -1,12 +1,17 @@
-<h1>Bookings for my lessons</h1>
+<main>
+  <h1>Bookings for my lessons</h1>
 
-<% @lessons.each do |lesson| %>
-<div>
-<p><%= link_to lesson.title, lesson %></p>
-<% lesson.bookings.each do |booking| %>
-<p>Date: <%= booking.date %></p>
-<p>Time: <%= booking.time %></p>
-<p>Student: <%= link_to booking.student.try(:first_name) + " " + booking.student.try(:last_name), booking.student %></p>
-<% end %>
-</div>
-<% end %>
+  <% @lessons.each do |lesson| %>
+  <div>
+    <p><%= link_to lesson.title, lesson %></p>
+    <% if lesson.bookings.count == 0 %>
+    <p>You have 0 bookings for this lesson!</p>
+    <% end %>
+    <% lesson.bookings.each do |booking| %>
+    <p>Date: <%= booking.date %></p>
+    <p>Time: <%= booking.time %></p>
+    <p>Student: <%= link_to booking.student.try(:first_name) + " " + booking.student.try(:last_name), booking.student %></p>
+    <% end %>
+  </div>
+  <% end %>
+</main>
