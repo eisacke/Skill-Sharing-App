@@ -3,6 +3,7 @@
   background: white;
   text-decoration: none;
   padding: 5px 10px;
+  line-height: 2.2;
 }
 
 .category_button:hover {
@@ -11,6 +12,9 @@
   border: 1px solid palegreen;
 }
 
-.category_show_container {
-  margin: 20px 0;
+.category_container {
+  width: 115px;
+  text-align: right;
+  background: grey;
+  float: right;
 }

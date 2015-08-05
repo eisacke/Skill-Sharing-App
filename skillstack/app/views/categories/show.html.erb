@@ -1,12 +1,10 @@
 <main>
 
-  <h2><%= @category.name %></h2>
-  <p><%= @category.description %></p>
-  <div class="category_show_container">
+  <h2><%= @category.name %> Lessons</h2>
+  <div class="category_container">
     <% @categories.each do |category| %>
-    <%= link_to category.name, category, class: "category_button" %>
+    <%= link_to category.name, category, class: "category_button" %><br>
     <% end %>
-    <%= link_to "All Lessons", lessons_path, class: "category_button" %>
   </div>
   <%= render @category.lessons %>
 
