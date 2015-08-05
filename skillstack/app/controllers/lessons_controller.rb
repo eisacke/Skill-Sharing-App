@@ -4,11 +4,8 @@ class LessonsController < ApplicationController
   # GET /lessons
   # GET /lessons.json
   def index
-    if params[:search].present?
-      @lessons = Lesson.near(params[:search], 100)
-    else
-      @lessons = Lesson.all
-    end
+    @search = Lesson.search(params[:q])
+    @lessons = @search.result
   end
 
   def teacher_lessons

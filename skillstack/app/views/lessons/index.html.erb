@@ -1,10 +1,10 @@
 <h1>Listing Lessons</h1>
 
-<%= form_tag lessons_path, :method => :get do %>
-<p>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search Near", :name => nil %>
-</p>
+<%= search_form_for @search do |f| %>
+<div class="field">
+  <%= f.text_field :description_cont, :placeholder => "What would you like to learn?" %>
+  <%= f.submit "Search" %>
+</div>
 <% end %>
 
 <ul>
