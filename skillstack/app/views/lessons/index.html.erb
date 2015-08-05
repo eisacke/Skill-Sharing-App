@@ -2,9 +2,11 @@
   <h1>Listing Lessons</h1>
 
   <%= search_form_for @search do |f| %>
-  <div class="field">
-    <%= f.text_field :description_cont, :placeholder => "What would you like to learn?" %>
-    <%= f.submit "Search" %>
+  <div class="field homepage_search">
+    <div class="homepage_search_container">
+      <%= f.text_field :description_cont, :placeholder => "What would you like to learn?" %>
+      <%= f.submit "Search" %>
+    </div>
   </div>
   <% end %>
 

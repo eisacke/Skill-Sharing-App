@@ -4,14 +4,12 @@
       <li><%= link_to "skillstack", root_url %></li>
       <% if current_user %>
       <li><%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
-      <li><%= link_to "My Bookings", bookings_path %></li>
-      <li><%= link_to "My Lesson Bookings", "/mylessonbookings" %></li>
       <li><a href="/users/<%= current_user.id %>">View Profile</a></li>
-      <li>Hello, <%= current_user.first_name %></li>
       <% else %>
       <li><%= link_to "Login", login_path %></li>
       <% end %>
       <li><%= link_to "Lessons", lessons_path %></li>
+      <li><%= link_to "Create Lesson", new_lesson_path %></li>
       <li><%= link_to "Categories", categories_path %></li>
     </ul>
   </nav>
