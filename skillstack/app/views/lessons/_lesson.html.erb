@@ -1,11 +1,11 @@
 <div class="lesson_index">
     <ul>
-      <li>Title: <%= link_to lesson.title, lesson %></li>
-      <li>Description: <%= lesson.description %></li>
-      <li>Image One: <%= image_tag lesson.image_one %></li>
-      <li>Location: <%= lesson.location %></li>
-      <li>Cost: <%= lesson.cost %></li>
-      <li>with <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></li>
-      <li>Category: <%= link_to lesson.category.try(:name), lesson.category %></li>
+      <li><p>Title: <%= link_to lesson.title, lesson %></p></li>
+      <li><p>Description: <%= lesson.description %></p></li>
+      <li><p>Image One: <%= image_tag lesson.image_one %></p></li>
+      <li><p>Location: <%= lesson.location %></p></li>
+      <li><p>Cost: <%= lesson.cost %></p></li>
+      <li><p>with <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></p></li>
+      <li><p>Category: <%= link_to lesson.category.try(:name), lesson.category %></p></li>
     </ul>
 </div>

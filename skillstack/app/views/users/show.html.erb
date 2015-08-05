@@ -1,12 +1,16 @@
 <main>
 
   <div class="user_profile_info">
+    <div class="user_avatar">
+      <%= image_tag @user.avatar.detail %>
+    </div>
+    <div class="user_name_bio">
     <h2><%= @user.first_name %> <%= @user.last_name %></h2>
     <p>
       <strong>Bio:</strong>
       <%= @user.bio %>
     </p>
-    <%= image_tag @user.avatar.detail %>
+    </div>
   </div>
 
   <div class="user_details">

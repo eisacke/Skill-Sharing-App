@@ -1,3 +1,9 @@
+h1 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 h2 {
   font-size: 20px;
   font-weight: bold;
@@ -11,5 +17,10 @@ h3 {
 }
 
 p {
-  line-height: 1.5;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+a {
+  color: black;
 }
