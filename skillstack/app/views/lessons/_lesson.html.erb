@@ -5,7 +5,7 @@
       <li>Image One: <%= image_tag lesson.image_one %></li>
       <li>Location: <%= lesson.location %></li>
       <li>Cost: <%= lesson.cost %></li>
-      <li>Teacher: <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></li>
+      <li>with <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></li>
       <li>Category: <%= link_to lesson.category.try(:name), lesson.category %></li>
     </ul>
 </div>

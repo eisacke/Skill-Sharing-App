@@ -1,6 +1,4 @@
 <main>
-  <h1>Listing Lessons</h1>
-
   <%= search_form_for @search do |f| %>
   <div class="field homepage_search">
     <div class="homepage_search_container">
@@ -9,7 +7,8 @@
     </div>
   </div>
   <% end %>
-
-  <%= render @lessons %>
+  <div class="lesson_index_container">
+    <%= render @lessons %>
+  </div>
 
 </main>

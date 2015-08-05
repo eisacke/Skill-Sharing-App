@@ -8,8 +8,8 @@
   </p>
 
   <%= image_tag @user.avatar.detail %>
-  <p>Lessons that <%= @user.first_name %> teaches</p>
   <div class ="user_show_lessons">
+  <p>Lessons that <%= @user.first_name %> teaches</p>
     <%= render @user.lessons %>
   </div>
 
