@@ -1,5 +1,4 @@
 <div class="lesson_index">
-  <li>
     <ul>
       <li>Title: <%= link_to lesson.title, lesson %></li>
       <li>Description: <%= lesson.description %></li>
@@ -9,5 +8,4 @@
       <li>Teacher: <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></li>
       <li>Category: <%= link_to lesson.category.try(:name), lesson.category %></li>
     </ul>
-  </li>
 </div>

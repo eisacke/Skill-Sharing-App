@@ -22,19 +22,11 @@
     <%= @user.bio %>
   </p>
 
-  <p>
-    <strong>Image:</strong>
-    <%= image_tag @user.avatar.detail %>
-  </p>
-
-  <p>Classes:</p>
-  <% @user.lessons.each do |lesson| %>
-  <div class="lesson">
-    <%= link_to lesson do %>
-    <%= lesson.title %>
-    <% end %>
+  <%= image_tag @user.avatar.detail %>
+  <p>Lessons that <%= @user.first_name %> teaches</p>
+  <div class ="user_show_lessons">
+    <%= render @user.lessons %>
   </div>
-  <% end %>
   <% if current_user == @user %>
   <%= link_to 'Edit', edit_user_path(@user) %>
   <% end %>

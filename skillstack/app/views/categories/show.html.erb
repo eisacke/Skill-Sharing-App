@@ -1,19 +1,21 @@
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+<main>
+  <p>
+    <strong>Name:</strong>
+    <%= @category.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @category.description %>
+  </p>
 
-<% @category.lessons.each do |lesson| %>
-<p>Title:</p>
-<%= link_to lesson do %>
-<p><%= lesson.title %></p>
-<% end %>
-<% end %>
+  <% @category.lessons.each do |lesson| %>
+  <p>Title:</p>
+  <%= link_to lesson do %>
+  <p><%= lesson.title %></p>
+  <% end %>
+  <% end %>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+  <%= link_to 'Edit', edit_category_path(@category) %> |
+  <%= link_to 'Back', categories_path %>
+</main>

@@ -10,13 +10,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= render "header" %>
+  <div class="wrapper">
+    <%= render "header" %>
     <% flash.each do |name, message| %>
     <div class="flash-message flash-message-<%= name %>">
       <%= message %>
     </div>
     <% end %>
     <%= yield %>
+    <div class="push"></div>
+  </div>
+  <div class ="footer">
+    <p>skillstack &copy;</p>
+  </div>
 </body>
 </html>
 

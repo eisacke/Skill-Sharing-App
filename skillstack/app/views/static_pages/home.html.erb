@@ -1,9 +1,9 @@
 <div class="homepage_banner">
   <%= search_form_for @search do |f| %>
   <div class="field homepage_search">
-  <div class="homepage_search_container">
-    <%= f.text_field :description_cont, :placeholder => "What would you like to learn?" %>
-    <%= f.submit "Search", :class => 'homepage_submit' %>
+    <div class="homepage_search_container">
+      <%= f.text_field :description_cont, :placeholder => "What would you like to learn?" %>
+      <%= f.submit "Search", :class => 'homepage_submit' %>
     </div>
   </div>
   <% end %>
@@ -11,8 +11,6 @@
 <main>
   <h2>Popular Lessons</h2>
 
-  <ul>
-    <%= render @lessons %>
-  </ul>
+  <%= render @lessons %>
   
 </main>
