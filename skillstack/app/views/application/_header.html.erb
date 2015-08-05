@@ -1,7 +1,7 @@
 <header>
   <nav>
     <ul>
-      <li><%= link_to "skillstack", lessons_path %></li>
+      <li><%= link_to "skillstack", root_url %></li>
       <% if current_user %>
       <li><%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
       <li><%= link_to "My Bookings", bookings_path %></li>
