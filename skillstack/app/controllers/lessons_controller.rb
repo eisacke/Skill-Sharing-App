@@ -6,6 +6,7 @@ class LessonsController < ApplicationController
   def index
     @search = Lesson.search(params[:q])
     @lessons = @search.result
+    @categories = Category.all
   end
 
   def teacher_lessons

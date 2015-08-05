@@ -1,21 +1,13 @@
 <main>
-  <p>
-    <strong>Name:</strong>
-    <%= @category.name %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @category.description %>
-  </p>
+  <h2><%= @category.name %></h2>
 
-  <% @category.lessons.each do |lesson| %>
-  <p>Title:</p>
-  <%= link_to lesson do %>
-  <p><%= lesson.title %></p>
-  <% end %>
-  <% end %>
+  <p><%= @category.description %></p>
+  <div class="category_container">
+    <% @categories.each do |category| %>
+    <%= link_to category.name, category, class: "category_show_button" %>
+    <% end %>
+  </div>
+  <%= render @category.lessons %>
 
-  <%= link_to 'Edit', edit_category_path(@category) %> |
-  <%= link_to 'Back', categories_path %>
 </main>

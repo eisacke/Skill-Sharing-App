@@ -7,6 +7,12 @@
     </div>
   </div>
   <% end %>
+  <div class ="category_container">
+    <% @categories.each do |category| %>
+    <%= link_to category.name, category, class: "category_button" %>
+    <% end %> 
+  </div>
+
   <div class="lesson_index_container">
     <%= render @lessons %>
   </div>
