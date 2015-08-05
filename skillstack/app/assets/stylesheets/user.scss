@@ -1,9 +1,17 @@
-.user_show_lessons {
-  clear: both;
-  margin: 20px 0;
+.user_profile_info {
+  width: 400px;
+  background: grey;
+  float: left;
 }
 
 .user_details {
+  text-align: right;
+  float: right;
+  width: 300px;
   background: dodgerblue;
-  clear:both;
+}
+
+.user_show_lessons {
+  clear: both;
+  margin: 20px 0;
 }

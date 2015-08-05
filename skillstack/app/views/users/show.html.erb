@@ -1,23 +1,24 @@
 <main>
 
-  <h2><%= @user.first_name %> <%= @user.last_name %></h2>
-
-  <p>
-    <strong>Bio:</strong>
-    <%= @user.bio %>
-  </p>
-
-  <%= image_tag @user.avatar.detail %>
-  <div class ="user_show_lessons">
-  <p>Lessons that <%= @user.first_name %> teaches</p>
-    <%= render @user.lessons %>
+  <div class="user_profile_info">
+    <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+    <p>
+      <strong>Bio:</strong>
+      <%= @user.bio %>
+    </p>
+    <%= image_tag @user.avatar.detail %>
   </div>
 
   <div class="user_details">
-    <% if current_user == @user %>
-    <%= link_to 'Edit Profile', edit_user_path(@user) %>
-    <%= link_to 'My Bookings', bookings_path %>
-    <%= link_to "My Lesson Bookings", "/mylessonbookings" %>
+    <p><% if current_user == @user %></p>
+    <p><%= link_to 'Edit Profile', edit_user_path(@user) %></p>
+    <p><%= link_to 'View Bookings', bookings_path %></p>
+    <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
     <% end %>
+  </div>
+
+  <div class ="user_show_lessons">
+    <h3>Lessons that <%= @user.first_name %> teaches</h3>
+    <%= render @user.lessons %>
   </div>
 </main>
