@@ -44,7 +44,8 @@
     <%= link_to @lesson.category.try(:name), @lesson.category %>
   </p>
 
-  <p><%= link_to "MAKE BOOKING", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
-
+  <p><%= link_to "Book this lesson!", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
+  <% if current_user == @lesson.teacher %>
   <%= link_to 'Edit', edit_lesson_path(@lesson) %>
+  <% end %>
 </main>
