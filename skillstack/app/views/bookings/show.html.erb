@@ -1,4 +1,5 @@
 <main>
+
   <p>
     <strong>Lesson Title:</strong>
     <%= link_to @booking.lesson.try(:title), @booking.lesson %>
@@ -19,6 +20,4 @@
     <%= @booking.date %>
   </p>
 
-  <%= link_to 'Edit', edit_booking_path(@booking) %> |
-  <%= link_to 'Back', bookings_path %>
 </main>

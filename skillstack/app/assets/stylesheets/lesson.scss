@@ -5,6 +5,21 @@
   padding: 20px
 }
 
+.small_category_button {
+  border: 1px solid black;
+  font-size: 13px;
+  background: white;
+  text-decoration: none;
+  padding: 3px 6px;
+  line-height: 2.7;
+}
+
+.small_category_button:hover {
+  background: #3F7CFF;
+  color: white;
+  border: 1px solid #3F7CFF;
+}
+
 .lesson_index_container {
   margin: 20px 0;
   clear: both;

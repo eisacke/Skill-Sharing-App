@@ -5,8 +5,7 @@
     <li>Lesson Teacher: <%= link_to booking.lesson.teacher.try(:first_name) + " " + booking.lesson.teacher.try(:last_name), booking.lesson.teacher %></li>
     <li>Date: <%= booking.date %></li>
     <li>Time: <%= booking.time %></li>
-    <li><%= link_to 'Show', booking %></li>
-    <li><%= link_to 'Edit', edit_booking_path(booking) %></li>
-    <li><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+    <li><%= link_to 'Edit Booking', edit_booking_path(booking) %></li>
+    <li><%= link_to 'Delete Booking', booking, method: :delete, data: { confirm: 'Are you sure?' } %></li>
   </ul>
 </li>
