@@ -8,4 +8,7 @@
       <li><p>with <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></p></li>
       <li><%= link_to lesson.category.try(:name), lesson.category, class: "small_category_button" %></li>
     </ul>
+    <%= link_to like_lesson_path(lesson), method: :put do %>
+      <p>Likes: <%= lesson.get_upvotes.size %></p>
+    <% end %>
 </div>

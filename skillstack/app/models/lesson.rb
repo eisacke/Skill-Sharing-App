@@ -10,4 +10,5 @@ class Lesson < ActiveRecord::Base
   belongs_to :teacher, class_name: 'User', foreign_key: 'teacher_id'
   has_many :bookings
   belongs_to :category
+  acts_as_votable
 end

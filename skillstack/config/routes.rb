@@ -6,6 +6,13 @@ Rails.application.routes.draw do
   resources :users
   resources :home, only: [:index]
 
+  resources :lessons do 
+    member do
+      put "like", to: "lessons#upvote"
+      put "dislike", to: "lessons#downvote"
+    end
+  end
+
   root 'static_pages#home'
   get "/login", to: "sessions#new"
   delete "/logout", to: "sessions#destroy"

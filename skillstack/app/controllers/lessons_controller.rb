@@ -14,6 +14,18 @@ class LessonsController < ApplicationController
     render :teacher_lessons
   end
 
+  def upvote 
+    @lesson = Lesson.find(params[:id])
+    @lesson.upvote_by current_user
+    redirect_to :back
+  end  
+
+  def downvote
+    @lesson = Lesson.find(params[:id])
+    @lesson.downvote_by current_user
+    redirect_to :back
+  end
+
   # GET /lessons/1
   # GET /lessons/1.json
   def show
