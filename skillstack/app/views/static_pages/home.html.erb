@@ -10,7 +10,12 @@
 </div>
 <main>
   <h2 class="popular">Popular Lessons</h2>
-
+  <div class="lesson_index_container">
   <%= render @lessons %>
-  
+  </div>
+  <div class ="category_container">
+    <% @categories.each do |category| %>
+    <%= link_to category.name, category, class: "category_button" %>
+    <% end %> 
+  </div>
 </main>
