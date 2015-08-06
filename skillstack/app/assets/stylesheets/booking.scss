@@ -1,0 +1,25 @@
+.booking_confirmation, .all_bookings {
+  padding: 20px 20px 0 20px;
+  background: white;
+  width: 350px;
+}
+
+.bookings_index_container {
+
+}
+
+.user_show_own_bookings {
+  display: inline-block;
+}
+
+p.delete {
+  color: white;
+  background-color: #EDEEEE;
+  border-bottom: 2px solid darkgrey;
+  border-radius: 5px;
+  padding: 5px 7px;
+  position: relative;
+  margin-top: 10px;
+  font-size: 13px;
+  width: 41px;
+}

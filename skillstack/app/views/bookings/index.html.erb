@@ -1,15 +1,12 @@
 <main>
-<div class="user_details">
-  <p><%= link_to 'View Bookings', bookings_path %></p>
-  <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
-</div>
-  <h1>My Bookings</h1>
-
+  <div class="user_details">
+    <p><%= link_to 'View Bookings', bookings_path %></p>
+    <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
+  </div>
   <% if current_user.bookings.count == 0 %>
   <p>You have made 0 bookings! <%= link_to 'Click here', lessons_path %> to browse available lessons.</p>
   <% end %>
-
-  <ul>
+  <div class="bookings_index_container">
     <%= render @bookings %>
-  </ul>
+  </div>
 </main>

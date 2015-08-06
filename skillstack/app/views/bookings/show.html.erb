@@ -1,23 +1,11 @@
 <main>
 
-  <p>
-    <strong>Lesson Title:</strong>
-    <%= link_to @booking.lesson.try(:title), @booking.lesson %>
-  </p>
+  <div class="booking_confirmation">
+  <h2>Your booking has been requested!</h2>
+  <p><span class="bold">Time:</span> <%= @booking.time %></p>
+  <p><span class="bold">Date:</span> <%= @booking.date %></p>
+  </div>
 
-  <p>
-    <strong>Teacher:</strong>
-    <%= link_to @booking.lesson.teacher.try(:first_name) + " " + @booking.lesson.teacher.try(:last_name), @booking.lesson.teacher %>
-  </p>
-
-  <p>
-    <strong>Time:</strong>
-    <%= @booking.time %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= @booking.date %>
-  </p>
+  <%= render @booking.lesson %>
 
 </main>
