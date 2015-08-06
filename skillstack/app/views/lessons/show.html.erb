@@ -1,58 +1,23 @@
 <main>
   <div class="lesson_show_info">
-    <div class="lesson_show_main_image"></div>
+  <div class="lesson_show_main_image"><%= image_tag @lesson.image_one.lesson_main %></div>
     <div class="lesson_show_text">
-      <p>
-        <strong>Title:</strong>
-        <%= @lesson.title %>
-      </p>
-
-      <p>
-        <strong>Description:</strong>
-        <%= @lesson.description %>
-      </p>
-
-      <p>
-        <strong>Image one:</strong>
-        <%= image_tag @lesson.image_one %>
-      </p>
-
-      <p>
-        <strong>Image two:</strong>
-        <%= @lesson.image_two %>
-      </p>
-
-      <p>
-        <strong>Image three:</strong>
-        <%= @lesson.image_three %>
-      </p>
-
-      <p>
-        <strong>Location:</strong>
-        <%= @lesson.location %>
-      </p>
-
-      <p>
-        <strong>Cost:</strong>
-        <%= @lesson.cost %>
-      </p>
-
-      <p>
-        <strong>Teacher:</strong>
-        <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %>
-      </p>
-
-      <p>
-        <strong>Category:</strong>
-        <%= link_to @lesson.category.try(:name), @lesson.category %>
-      </p>
-
-      <p><%= link_to "Request Booking", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
+      <h2><%= @lesson.title %></h2>
+      <p>with <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %></p>
+      <p>Description: <%= @lesson.description %></p>
+      <p>Location: <%= @lesson.location %></p>
+      <p>Cost: <%= @lesson.cost %></p>
+      <p>Category: <%= link_to @lesson.category.try(:name), @lesson.category %></p>
+      <%= link_to like_lesson_path(@lesson), method: :put do %>
+            <span class="small_likes_button">Likes: <%= @lesson.get_upvotes.size %></span>
+            <% end %>
+      <p><%= link_to "Request Booking", "/bookings/new?lesson_id=#{@lesson.id}", class: "request_lesson" %></p>
       <% if current_user == @lesson.teacher %>
-      <%= link_to 'Edit', edit_lesson_path(@lesson) %>
+      <%= link_to 'Edit Lesson', edit_lesson_path(@lesson) %>
       <% end %>
     </div>
   </div>
+
   <div class="nearby_main_container">
     <div class ="nearby_lessons">
       <h4>Nearby Lessons</h4>
