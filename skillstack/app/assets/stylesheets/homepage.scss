@@ -1,11 +1,25 @@
 .homepage_banner {
   width: 100%;
-  height: 300px;
-  background-image: image-url("lollies.jpg");
   background-position: center;
   background-size: cover;
-  opacity: 0.8;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+section.module.parallax {
+  height: 300px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   position: relative;
+}
+
+section.module.parallax-1 {
+  background-image: url("homepage_banner.jpg");
 }
 
 .homepage_search, .lesson_index_search {
