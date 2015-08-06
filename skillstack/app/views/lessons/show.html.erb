@@ -44,13 +44,19 @@
     <%= link_to @lesson.category.try(:name), @lesson.category %>
   </p>
 
-  <p><%= link_to "Book this lesson!", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
+  <p><%= link_to "Request Booking", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
   <% if current_user == @lesson.teacher %>
   <%= link_to 'Edit', edit_lesson_path(@lesson) %>
   <% end %>
-
+<div class="nearby_main_container">
   <div class ="nearby_lessons">
     <h4>Nearby Lessons</h4>
     <%= render @lesson.nearbys %>
+  </div>
+  <div class ="category_container">
+    <% @categories.each do |category| %>
+    <%= link_to category.name, category, class: "category_button" %>
+    <% end %> 
+  </div>
   </div>
 </main>

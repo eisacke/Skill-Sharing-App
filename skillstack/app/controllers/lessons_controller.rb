@@ -29,6 +29,7 @@ class LessonsController < ApplicationController
   # GET /lessons/1
   # GET /lessons/1.json
   def show
+    @categories = Category.all
   end
 
   # GET /lessons/new

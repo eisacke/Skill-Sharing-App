@@ -36,11 +36,19 @@
   top: -1px;
 }
 
+.nearby_main_container {
+  .category_container {
+    margin-top: 80px;
+  }
+}
+
 .nearby_lessons {
   padding-top: 20px;
   clear: both;
   margin: 20px 0;
   width: 800px;
+  display: inline-block;
+  clear: both;
   h4 {
     text-align: center;
     margin-bottom: 20px;
