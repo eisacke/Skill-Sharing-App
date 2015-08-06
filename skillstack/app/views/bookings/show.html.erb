@@ -1,11 +1,8 @@
 <main>
-
   <div class="booking_confirmation">
-  <h2>Your booking has been requested!</h2>
-  <p><span class="bold">Time:</span> <%= @booking.time %></p>
-  <p><span class="bold">Date:</span> <%= @booking.date %></p>
+    <h2>Your booking has been requested!</h2>
+    <p><span class="bold">Time:</span> <%= @booking.time %></p>
+    <p><span class="bold">Date:</span> <%= @booking.date %></p>
   </div>
-
   <%= render @booking.lesson %>
-
 </main>

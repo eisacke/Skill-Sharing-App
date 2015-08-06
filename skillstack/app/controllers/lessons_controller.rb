@@ -45,29 +45,29 @@ class LessonsController < ApplicationController
    end
  end
 
-  def update
-    respond_to do |format|
-      if @lesson.update(lesson_params)
-        format.html { redirect_to @lesson }
-      else
-        format.html { render :edit }
-      end
+ def update
+  respond_to do |format|
+    if @lesson.update(lesson_params)
+      format.html { redirect_to @lesson }
+    else
+      format.html { render :edit }
     end
   end
-  
-  def destroy
-    @lesson.destroy
-    respond_to do |format|
-      format.html { redirect_to lessons_url }
-    end
-  end
+end
 
-  private
-    def set_lesson
-      @lesson = Lesson.find(params[:id])
-    end
-
-    def lesson_params
-      params.require(:lesson).permit(:title, :description, :image_one, :image_two, :image_three, :location, :cost, :teacher_id, :category_id, :city, :longitute, :latitude)
-    end
+def destroy
+  @lesson.destroy
+  respond_to do |format|
+    format.html { redirect_to lessons_url }
   end
+end
+
+private
+def set_lesson
+  @lesson = Lesson.find(params[:id])
+end
+
+def lesson_params
+  params.require(:lesson).permit(:title, :description, :image_one, :image_two, :image_three, :location, :cost, :teacher_id, :category_id, :city, :longitute, :latitude)
+end
+end

@@ -8,10 +8,13 @@ u4 = User.create(first_name: "Alex", last_name: "Chin", bio: "Digital entreprene
 c1 = Category.create(name: "Culinery")
 c2 = Category.create(name: "Technology")
 c3 = Category.create(name: "Design")
-c4 = Category.create(name: "DIY")
-c5 = Category.create(name: "Music")
-c6 = Category.create(name: "Other")
+c4 = Category.create(name: "Music")
+c5 = Category.create(name: "Other")
 
 l1 = Lesson.create!(title: "Fresh Fruit Lollies", description: "It's definitely summer here in New York, and what better way to cool down than fresh fruit ice lollies. Join me in my Brooklyn studio and I'll show you how to make blueberry and raspberry lollies, which you can take home to enjoy. All ingredients are provided, and you will also get to meet my cat Jane!", location: "Brooklyn, New York", category_id: 1, cost: 20, teacher_id: 1)
 
 l2 = Lesson.create!(title: "Sweet Thai Chicken", description: "The inspiration for this recipe comes from my recent trip to Thailand. The perfect weeknight dish, that doubles as a dinner party favourite! A combination of chilli, lime and garlic make this an irresistible dish. All ingredients are provided, and you will also get to meet my cat Jane!", location: "Brooklyn, New York", category_id: 1, cost: 30, teacher_id: 1)
+
+l3 = Lesson.create!(title: "Intro to Handlettering", description: "Style a phrase you love, and share it wit your friends! In this lesson I will teach you the basics of handlettering, to use on a poster, magazine, t-shirt, or anything else you can imagine! I will provide all necessary materials, as well as tea and coffee.", location: "Wimbledon, London", category_id: 3, cost: 50, teacher_id: 2)
+
+l4 = Lesson.create!(title: "Intro to Photoshop", description: "Have you ever wished you could re-touch photographs with ease, or put together simple logo designs? In this lesson I will introduce you to the basics of Photoshoph and we will work together on a project of your choosing. I have all materials necessary, just bring yourself!", location: "Soho, London", category_id: 3, cost: 60, teacher_id: 2)

@@ -1,11 +1,11 @@
 <main>
   <div class="lesson_show_info">
-  <div class="lesson_show_main_image">
-  <% if current_user == @lesson.teacher %>
+    <div class="lesson_show_main_image">
+      <% if current_user == @lesson.teacher %>
       <%= link_to 'Edit Lesson', edit_lesson_path(@lesson), class: "lesson_edit_button" %>
       <% end %>
       <%= image_tag @lesson.image_one.lesson_main %>
-      </div>
+    </div>
     <div class="lesson_show_text">
       <h2><%= @lesson.title %> <%= link_to @lesson.category.try(:name), @lesson.category, class: "small_category_button" %></h2>
       <p class="lesson_teacher">with <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %></p>
@@ -13,8 +13,8 @@
       <p class="lesson_small_details"><%= @lesson.location %></p>
       <p class="lesson_small_details"><%= number_to_currency @lesson.cost, :unit => "£" %></p>
       <%= link_to like_lesson_path(@lesson), method: :put do %>
-            <span class="small_likes_button">Likes: <%= @lesson.get_upvotes.size %></span>
-            <% end %>
+      <span class="small_likes_button">Likes: <%= @lesson.get_upvotes.size %></span>
+      <% end %>
       <p><%= link_to "Request Booking", "/bookings/new?lesson_id=#{@lesson.id}", class: "request_lesson" %></p>
     </div>
   </div>

@@ -1,5 +1,4 @@
 <main>
-
   <div class="user_profile_info">
     <div class="user_avatar">
       <%= image_tag @user.avatar.detail %>
@@ -9,7 +8,6 @@
     <p><%= @user.bio %></p>
     </div>
   </div>
-
   <div class="user_details">
     <p><% if current_user == @user %></p>
     <p><%= link_to 'Edit Profile', edit_user_path(@user) %></p>
@@ -17,7 +15,6 @@
     <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
     <% end %>
   </div>
-
   <div class ="user_show_lessons">
     <h4>Lessons that <%= @user.first_name %> teaches</h4>
     <%= render @user.lessons %>

@@ -16,38 +16,38 @@ class BookingsController < ApplicationController
   end
 
   def create
-     params[:booking][:student_id] = current_user.id
-     @booking = Booking.new(booking_params)
-     if @booking.save
-       redirect_to @booking
-     else
-       render :new
-     end
-    end
+   params[:booking][:student_id] = current_user.id
+   @booking = Booking.new(booking_params)
+   if @booking.save
+     redirect_to @booking
+   else
+     render :new
+   end
+ end
 
-  def update
-    respond_to do |format|
-      if @booking.update(booking_params)
-        format.html { redirect_to @booking }
-      else
-        format.html { render :edit }
-      end
+ def update
+  respond_to do |format|
+    if @booking.update(booking_params)
+      format.html { redirect_to @booking }
+    else
+      format.html { render :edit }
     end
   end
+end
 
-  def destroy
-    @booking.destroy
-    respond_to do |format|
-      format.html { redirect_to bookings_url }
-    end
+def destroy
+  @booking.destroy
+  respond_to do |format|
+    format.html { redirect_to bookings_url }
   end
+end
 
-  private
-    def set_booking
-      @booking = Booking.find(params[:id])
-    end
+private
+def set_booking
+  @booking = Booking.find(params[:id])
+end
 
-    def booking_params
-      params.require(:booking).permit(:lesson_id, :student_id, :time, :date)
-    end
+def booking_params
+  params.require(:booking).permit(:lesson_id, :student_id, :time, :date)
+end
 end

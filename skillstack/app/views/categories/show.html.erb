@@ -1,5 +1,4 @@
 <main>
-
   <h2><%= @category.name %> Lessons</h2>
   <div class="category_container">
     <% @categories.each do |category| %>
@@ -9,5 +8,4 @@
   <div class="category_lessons_container">
     <%= render @category.lessons %>
   </div>
-
 </main>
