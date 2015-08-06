@@ -1,5 +1,6 @@
 class Lesson < ActiveRecord::Base
   validates :title, presence: true
+  validates :description, length: { maximum: 350 }
   mount_uploader :image_one, AvatarUploader
   mount_uploader :image_two, AvatarUploader
   mount_uploader :image_three, AvatarUploader

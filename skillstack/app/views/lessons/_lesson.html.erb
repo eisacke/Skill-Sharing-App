@@ -3,9 +3,9 @@
     <div class="lesson_index_image"><%= image_tag lesson.image_one.lesson_index %></div>
     <li><h3><%= link_to lesson.title, lesson %> <%= link_to lesson.category.try(:name), lesson.category, class: "small_category_button" %></h3></li>
     <li><p class="lesson_teacher">with <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></p></li>
-    <li><p><%= truncate(lesson.description, :length => 130) %></p></li>
-    <li><p><%= lesson.location %></p></li>
-    <li><p>Cost: <%= lesson.cost %></p></li>
+    <li><p><%= truncate(lesson.description, :length => 120) %></p></li>
+    <li><p class="lesson_small_details"><%= lesson.location %></p></li>
+    <li><p class="lesson_small_details"><%= number_to_currency lesson.cost, :unit => "£" %></p></li>
     <li><%= link_to like_lesson_path(lesson), method: :put do %>
       <span class="small_likes_button">Likes: <%= lesson.get_upvotes.size %></span>
       <% end %></li>
