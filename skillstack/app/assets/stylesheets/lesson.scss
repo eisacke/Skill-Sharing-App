@@ -49,7 +49,8 @@
 
 .lesson_show_text {
   padding: 0 20px;
-  float: left;}
+  float: left;
+}
 
 // SHOW IMAGES
 
@@ -57,7 +58,9 @@
   width: 350px;
   height: 350px;
   background-color: azure;
-  float: left;}
+  float: left;
+  position: relative;
+}
 
 // NEARBY
 
@@ -77,6 +80,19 @@
     text-align: center;
     margin-bottom: 20px;
   }
+}
+
+.lesson_edit_button {
+  border: 1px solid #EDEEEE;
+  background: white;
+  text-decoration: none;
+  padding: 0px 5px;
+  line-height: 2.2;
+  position: absolute;
+  font-size: 13px;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1;
 }
 
 .request_lesson {
