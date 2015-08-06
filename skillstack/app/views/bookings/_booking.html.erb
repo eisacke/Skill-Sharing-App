@@ -1,6 +1,5 @@
 <div class="user_show_own_bookings">
   <div class="all_bookings">
-    <h3>My Booking</h3>
     <p><span class="bold">Date:</span> <%= booking.date %></p>
     <p><span class="bold">Time:</span> <%= booking.time %></p>
     <p class="delete"><%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' } %></p>

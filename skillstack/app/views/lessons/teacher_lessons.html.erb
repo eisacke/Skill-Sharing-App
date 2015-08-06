@@ -1,22 +1,28 @@
 <main>
-<div class="user_details">
-  <p><%= link_to 'View Bookings', bookings_path %></p>
-  <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
-</div>
+  <div class="user_details">
+    <p><%= link_to 'View Bookings', bookings_path %></p>
+    <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
+  </div>
 
   <h1>Upcoming Lessons</h1>
-
-  <% @lessons.each do |lesson| %>
-  <div>
-    <h3><%= link_to lesson.title, lesson %></h3>
-    <% if lesson.bookings.count == 0 %>
-    <p>You have 0 bookings for this lesson!</p>
+  <div class="all_teachers_lessons">
+    <% @lessons.each do |lesson| %>
+    <div class="teachers_lessons">
+      <%= link_to lesson do %>
+      <%= image_tag lesson.image_one.lesson_index, class: "lesson_booking_image" %>
+      <% end %>
+      <h2><%= link_to lesson.title, lesson %></h2>
+      <% if lesson.bookings.count == 0 %>
+      <p>You have 0 bookings for this lesson!</p>
+      <% end %>
+      <% lesson.bookings.each do |booking| %>
+      <div class="individual_lesson_booking">
+        <p><span class="bold">Student:</span> <%= link_to booking.student.try(:first_name) + " " + booking.student.try(:last_name), booking.student %></p>
+        <p><span class="bold">Date:</span> <%= booking.date %></p>
+        <p><span class="bold">Time:</span> <%= booking.time %></p>
+      </div>
+      <% end %>
+    </div>
     <% end %>
-    <% lesson.bookings.each do |booking| %>
-    <p>Date: <%= booking.date %></p>
-    <p>Time: <%= booking.time %></p>
-    <p>Student: <%= link_to booking.student.try(:first_name) + " " + booking.student.try(:last_name), booking.student %></p>
-    <% end %>
-  </div>
-  <% end %>
-</main>
+  </main>
+</div>

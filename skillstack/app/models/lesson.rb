@@ -9,7 +9,7 @@ class Lesson < ActiveRecord::Base
   after_validation :geocode
 
   belongs_to :teacher, class_name: 'User', foreign_key: 'teacher_id'
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   belongs_to :category
   acts_as_votable
 end

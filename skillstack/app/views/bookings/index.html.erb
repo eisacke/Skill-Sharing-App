@@ -4,7 +4,7 @@
     <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
   </div>
   <% if current_user.bookings.count == 0 %>
-  <p>You have made 0 bookings! <%= link_to 'Click here', lessons_path %> to browse available lessons.</p>
+  <p>You have made 0 bookings! <%= link_to 'Click here', lessons_path, class: "bold" %> to browse available lessons.</p>
   <% end %>
   <div class="bookings_index_container">
     <%= render @bookings %>
