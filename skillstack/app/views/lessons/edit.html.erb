@@ -3,5 +3,5 @@
 
   <%= render 'form' %>
 
-  <%= link_to 'Destroy', @lesson, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <p class="delete"><%= link_to 'Delete', @lesson, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 </main>
