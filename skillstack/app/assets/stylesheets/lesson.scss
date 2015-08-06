@@ -1,3 +1,5 @@
+// INDEX
+
 .lesson_index {
   width: 350px;
   background: white;
@@ -36,6 +38,29 @@
   top: -1px;
 }
 
+// SHOW
+
+.lesson_show_info {
+  background: white;
+  padding: 20px;
+  display: inline-block;
+  width: 960px;
+}
+
+.lesson_show_text {
+  display: inline-block;
+}
+
+// SHOW IMAGES
+
+.lesson_show_main_image {
+  width: 350px;
+  height: 350px;
+  background-color: azure;
+}
+
+// NEARBY
+
 .nearby_main_container {
   .category_container {
     margin-top: 80px;
@@ -43,7 +68,6 @@
 }
 
 .nearby_lessons {
-  padding-top: 20px;
   clear: both;
   margin: 20px 0;
   width: 800px;

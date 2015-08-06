@@ -1,62 +1,67 @@
 <main>
-  <p>
-    <strong>Title:</strong>
-    <%= @lesson.title %>
-  </p>
+  <div class="lesson_show_info">
+    <div class="lesson_show_main_image"></div>
+    <div class="lesson_show_text">
+      <p>
+        <strong>Title:</strong>
+        <%= @lesson.title %>
+      </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @lesson.description %>
-  </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @lesson.description %>
+      </p>
 
-  <p>
-    <strong>Image one:</strong>
-    <%= image_tag @lesson.image_one %>
-  </p>
+      <p>
+        <strong>Image one:</strong>
+        <%= image_tag @lesson.image_one %>
+      </p>
 
-  <p>
-    <strong>Image two:</strong>
-    <%= @lesson.image_two %>
-  </p>
+      <p>
+        <strong>Image two:</strong>
+        <%= @lesson.image_two %>
+      </p>
 
-  <p>
-    <strong>Image three:</strong>
-    <%= @lesson.image_three %>
-  </p>
+      <p>
+        <strong>Image three:</strong>
+        <%= @lesson.image_three %>
+      </p>
 
-  <p>
-    <strong>Location:</strong>
-    <%= @lesson.location %>
-  </p>
+      <p>
+        <strong>Location:</strong>
+        <%= @lesson.location %>
+      </p>
 
-  <p>
-    <strong>Cost:</strong>
-    <%= @lesson.cost %>
-  </p>
+      <p>
+        <strong>Cost:</strong>
+        <%= @lesson.cost %>
+      </p>
 
-  <p>
-    <strong>Teacher:</strong>
-    <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %>
-  </p>
+      <p>
+        <strong>Teacher:</strong>
+        <%= link_to @lesson.teacher.try(:first_name) + " " + @lesson.teacher.try(:last_name), @lesson.teacher %>
+      </p>
 
-  <p>
-    <strong>Category:</strong>
-    <%= link_to @lesson.category.try(:name), @lesson.category %>
-  </p>
+      <p>
+        <strong>Category:</strong>
+        <%= link_to @lesson.category.try(:name), @lesson.category %>
+      </p>
 
-  <p><%= link_to "Request Booking", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
-  <% if current_user == @lesson.teacher %>
-  <%= link_to 'Edit', edit_lesson_path(@lesson) %>
-  <% end %>
-<div class="nearby_main_container">
-  <div class ="nearby_lessons">
-    <h4>Nearby Lessons</h4>
-    <%= render @lesson.nearbys %>
+      <p><%= link_to "Request Booking", "/bookings/new?lesson_id=#{@lesson.id}" %></p>
+      <% if current_user == @lesson.teacher %>
+      <%= link_to 'Edit', edit_lesson_path(@lesson) %>
+      <% end %>
+    </div>
   </div>
-  <div class ="category_container">
-    <% @categories.each do |category| %>
-    <%= link_to category.name, category, class: "category_button" %>
-    <% end %> 
-  </div>
+  <div class="nearby_main_container">
+    <div class ="nearby_lessons">
+      <h4>Nearby Lessons</h4>
+      <%= render @lesson.nearbys %>
+    </div>
+    <div class ="category_container">
+      <% @categories.each do |category| %>
+      <%= link_to category.name, category, class: "category_button" %>
+      <% end %> 
+    </div>
   </div>
 </main>
