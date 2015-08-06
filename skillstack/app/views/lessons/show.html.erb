@@ -48,4 +48,9 @@
   <% if current_user == @lesson.teacher %>
   <%= link_to 'Edit', edit_lesson_path(@lesson) %>
   <% end %>
+
+  <div class ="nearby_lessons">
+    <h3>Nearby Lessons</h3>
+    <%= render @lesson.nearbys %>
+  </div>
 </main>
