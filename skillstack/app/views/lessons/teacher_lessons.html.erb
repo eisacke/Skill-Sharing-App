@@ -1,5 +1,6 @@
 <main>
   <div class="user_details">
+    <p><%= link_to 'Edit Profile', edit_user_path(current_user) %></p>
     <p><%= link_to 'View Bookings', bookings_path %></p>
     <p><%= link_to "View Lessons", "/mylessonbookings" %></p>
   </div>

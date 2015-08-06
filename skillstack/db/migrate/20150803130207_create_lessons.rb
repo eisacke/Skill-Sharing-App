@@ -1,8 +1,4 @@
 class CreateLessons < ActiveRecord::Migration
-  mount_uploader :image_one, AvatarUploader
-  mount_uploader :image_two, AvatarUploader
-  mount_uploader :image_three, AvatarUploader
-
   def change
     create_table :lessons do |t|
       t.string :title
