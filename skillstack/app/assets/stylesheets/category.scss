@@ -12,6 +12,21 @@
   border: 1px solid #44F2CB;
 }
 
+.small_category_button {
+  border: 1px solid #EDEEEE;
+  font-size: 13px;
+  background: white;
+  text-decoration: none;
+  padding: 3px 6px;
+  line-height: 2.7;
+}
+
+.small_category_button:hover {
+  background: #3F7CFF;
+  color: white;
+  border: 1px solid #3F7CFF;
+}
+
 .category_container {
   width: 115px;
   text-align: right;

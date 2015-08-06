@@ -1,14 +1,14 @@
 <div class="lesson_index">
-    <ul>
-      <li><h3><%= link_to lesson.title, lesson %></h3></li>
-      <li><p>Description: <%= lesson.description %></p></li>
-      <li><p>Image One: <%= image_tag lesson.image_one %></p></li>
-      <li><p><%= lesson.location %></p></li>
-      <li><p>Cost: <%= lesson.cost %></p></li>
-      <li><p>with <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></p></li>
-      <li><%= link_to lesson.category.try(:name), lesson.category, class: "small_category_button" %></li>
+  <ul>
+    <li><h3><%= link_to lesson.title, lesson %></h3></li>
+    <li><p>Description: <%= lesson.description %></p></li>
+    <li><p>Image One: <%= image_tag lesson.image_one %></p></li>
+    <li><p><%= lesson.location %></p></li>
+    <li><p>Cost: <%= lesson.cost %></p></li>
+    <li><p>with <%= link_to lesson.teacher.try(:first_name) + " " + lesson.teacher.try(:last_name), lesson.teacher %></p></li>
+    <li><%= link_to lesson.category.try(:name), lesson.category, class: "small_category_button" %>
+      <%= link_to like_lesson_path(lesson), method: :put do %>
+      <span class="small_likes_button">Like <%= lesson.get_upvotes.size %></span>
+      <% end %></li>
     </ul>
-    <%= link_to like_lesson_path(lesson), method: :put do %>
-      <p>Likes: <%= lesson.get_upvotes.size %></p>
-    <% end %>
-</div>
+  </div>
