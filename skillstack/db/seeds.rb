@@ -1,4 +1,5 @@
 u1 = User.create(first_name: "Chloe", last_name: "Isacke", bio: "I'm a recent NYU graduate, currently studying at App Academy in New York to become a web developer. I live with my boyfriend in Brooklyn, and I'm obsessed with kickboxing and yoga. I love meeting new people, and am excited to share my love of food with the skillstack community.", password_digest: User.digest("chloe").to_s, email: "chloe@skillstack.com")
+
 u2 = User.create(first_name: "Oliver", last_name: "Roe", bio: "I graduated university with a first class degree in Graphic Design, and have since been working for small design studio in London. I specialise in Photoshop and Indesign, and I'm excited to share my skills. I'm currently based in Wimbledon, but often run classes in central London", password_digest: User.digest("oly").to_s, email: "oly@skillstack.com")
 
 u3 = User.create(first_name: "Jessica", last_name: "Morgan", bio: "After graduating from the BRIT School when I was 16, I supported Marina & The Diamonds on her first UK tour. I have released 2 EPs and toured in Los Angeles and New York. I have been a singer/songwriter for 10 years, and I can't wait to pass on my love of music to other skillstack members.", password_digest: User.digest("jessica").to_s, email: "jessica@skillstack.com")
@@ -38,6 +39,12 @@ b4 = Booking.create!(lesson_id: 1, student_id: 2, time: "1:30pm", date: "22nd Oc
 b5 = Booking.create!(lesson_id: 7, student_id: 2, time: "10:15am", date: "4th November 2015")
 
 b6 = Booking.create!(lesson_id: 5, student_id: 2, time: "5:45pm", date: "9th November 2015")
+
+b7 = Booking.create!(lesson_id: 1, student_id: 3, time: "2:00pm", date: "12th August 2015")
+
+b8 = Booking.create!(lesson_id: 4, student_id: 3, time: "4:15pm", date: "8th September 2015")
+
+b9 = Booking.create!(lesson_id: 2, student_id: 4, time: "11:45am", date: "4th August 2015")
 
 
 
