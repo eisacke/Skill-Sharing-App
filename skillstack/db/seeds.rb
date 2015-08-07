@@ -18,3 +18,8 @@ l2 = Lesson.create!(title: "Sweet Thai Chicken", description: "The inspiration f
 l3 = Lesson.create!(title: "Intro to Handlettering", description: "Style a phrase you love, and share it wit your friends! In this lesson I will teach you the basics of handlettering, to use on a poster, magazine, t-shirt, or anything else you can imagine! I will provide all necessary materials, as well as tea and coffee.", location: "Wimbledon, London", category_id: 3, cost: 50, teacher_id: 2)
 
 l4 = Lesson.create!(title: "Intro to Photoshop", description: "Have you ever wished you could re-touch photographs with ease, or put together simple logo designs? In this lesson I will introduce you to the basics of Photoshoph and we will work together on a project of your choosing. I have all materials necessary, just bring yourself!", location: "Soho, London", category_id: 3, cost: 60, teacher_id: 2)
+
+l5 = Lesson.create!(title: "Basics of Ruby", description: "In this lesson, we will look at the basics of the Ruby programming language, and work towards building a basic game. You don't need to have any experience of Ruby before, and I will provide all necessary software. This is a great way to get going if you are looking to work with Ruby in the future!", location: "Brick Lane, London", category_id: 2, cost: 90, teacher_id: 4)
+
+l6 = Lesson.create!(title: "CSS Frameworks", description: "There are a couple of greate CSS Frameworks out there, and this lesson will cover the pros and cons of the top three used by the industry. We will look at implementing a framework into a new project, and cover the differences between SASS and SCSS. I will provide all necessary software for this lesson.", location: "Brick Lane, London", category_id: 2, cost: 75, teacher_id: 4)
+
