@@ -4,6 +4,8 @@
   background-size: cover;
 }
 
+// PARALLAX
+
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -21,6 +23,8 @@ section.module.parallax {
 section.module.parallax-1 {
   background-image: url("homepage_banner.jpg");
 }
+
+// SEARCH BAR
 
 .homepage_search, .lesson_index_search {
   margin: 0 auto;

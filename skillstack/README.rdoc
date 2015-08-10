@@ -1,28 +1,26 @@
-== README
+# skillstack
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###GA WDI London - Project 2
 
-Things you may want to cover:
+***skillstack*** is a skill-sharing application, built with Ruby on Rails. The concept is simple - a user can post a lesson that they are willing to teach, browse available lessons and make a booking. 
 
-* Ruby version
+#####[View it here!](#)
 
-* System dependencies
+![](/Users/emilyisacke/DWI/second-project/skillstack/app/assets/images/skillstack-readme.jpg)
 
-* Configuration
+####Approach / How it works
 
-* Database creation
+![](/Users/emilyisacke/DWI/second-project/skillstack/app/assets/images/skillstack-readme2.jpg)
 
-* Database initialization
+####The build
 
-* How to run the test suite
+* HTML 5, CSS and Ruby on Rails were used to create this game. 
+* The Google Web Font 'Quicksand' has been used to style the app.
+* The following additional Ruby gems were used in the building of this app: 'acts_as_votable', ransack', 'geocoder', 'carrierwave' & 'rmagick'.
 
-* Services (job queues, cache servers, search engines, etc.)
+![](/Users/emilyisacke/DWI/second-project/skillstack/app/assets/images/skillstack-readme3.jpg)
 
-* Deployment instructions
-
-* ...
+#### Problems & Challenges
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
